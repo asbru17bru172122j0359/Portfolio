@@ -1,4 +1,5 @@
 *{
+    
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -6,6 +7,7 @@
     font-family: 'Times New Roman', Times, serif;
 }
 body{
+    
     color: white;
     background-color: #081b29;
 }
@@ -31,13 +33,15 @@ body{
     opacity: 0;
     animation: slideRight is ease forwards;
 }*/
+.navbar{
+    text-align: center;
+}
 .navbar a {
-    display: inline-block;
     font-size: 25px;
     color: #fff;
     text-decoration:none ;
     font-weight: 500;
-    margin-left: 35px;
+    margin-left: px;
     transition: .3s;
     opacity: 0;
     animation: slideTop .5s ease forwards;
@@ -554,9 +558,7 @@ body{
     color: #081b29;
     box-shadow: 0 0 20px #0ef;
 }
-.contact-form form{
-    position: relative;
-}
+
 .contact-form form input,form textarea{
     border: none;
     outline: none;
@@ -658,16 +660,23 @@ body{
         opacity: 100;
     }
 }
-@media only screen and (max-width:360px){
-    *body{
-        width:min(100% - 30px,840px);
-        margin-inline: auto;
-    }
-    .header{
-        position: fixed;
+@media (max-width: 908px) {
+    *{
         top: 0;
         left: 0;
-        max-width: 360px;
+        width: 100%;
+        }
+    body{ top: 0;
+        left: 0;
+        width: 100%;
+       
+        color: white;
+        background-color: #081b29;
+    }
+    .header{
+        top: 0;
+        left: 0;
+        width: 100%;
         padding: 10px 10%;
         background: #051129;
         display: flex;
@@ -675,71 +684,19 @@ body{
         align-items: center;
         z-index: 100;
     }
-    .navbar a {
-        display: inline-flex;
-        font-size: clamp(10px,8vw,15px);
-        color: #fff;
-        text-decoration:none ;
-        font-weight: 500;
-        
-        transition: .3s;
-        opacity: 0;
-        animation: slideTop .5s ease forwards;
-        animation-delay: calc(.2s * var(--i));
-    }
-    
     .about{
-       display: flex;
-       flex-wrap: wrap;
-    }
-    .about-img img{
-        height: auto;
-        width: 360px;
-        border-radius: 50%;
-        border-width: 200px;
-        
-    }
-    .about-text h1{
-        font-size: 60px;
-        text-align: center;
-    }
-    .about-text h1 span{
-        color: #0ef;
-    }
-    .about-text h4{
-        font-size: 29px;
-        font-weight: 600;
-        text-align: center;
-        color: #fff;
-        line-height: 1.7;
-        margin: 15px 0 30px;
-    }
-    .about-text p{
-        color: aliceblue;
-        font-size: 20px;
-        text-align: center;
-        line-height: 1.4;
-        margin-bottom: 4rem;
+        display: grid;
+        grid-template-columns: repeat(1, 2fr);
+        align-items: center;
+        gap: 1.5rem;
     }
     .contact{
-        display: flex;
-        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: repeat(1, 2fr);
         align-items: center;
         gap: 3rem;
         padding-left: 30px;
         margin-top: 130px;
     }
-    .container{
-        padding: 50px;
-    }
-    .service-list div{
-        background-color: transparent;
-        padding: 40px;
-        font-size: 13px;
-        font-weight: 13px;
-        border-right: 10px;
-        border-radius: 20px;
-        box-shadow: 1px 1px 20px #012290f7, 1px 1px 40px #012290f7;
-        transition: background 0.5s, transform 0.5s;
-    }
+    
 }
